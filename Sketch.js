@@ -62,15 +62,20 @@ function draw() {
     osc.amp(0, 0.5);
   }
 }
+// INSTRUCCIONES
+function drawInstructions() {
+  noStroke();
+  fill(0, 180);
+  rect(0, 0, width, 100);
 
-
-
-
-
-
-
-
-
+  fill(255);
+  textSize(14);
+  textAlign(LEFT);
+  text("Mano abierta: dibuja", 10, 20);
+  text("Pinch (pulgar + índice): cambia color", 10, 40);
+  text("Sin mano: pausa", 10, 60);
+  text("ESC: borrar todo", 10, 80);
+}
 
 function gotHands(results) {
   hands = results;
